@@ -1,0 +1,62 @@
+
+<mat-card class="centraliza">
+  <mat-card-title class="textoTituloCartao">{{titulo}}</mat-card-title>
+</mat-card>
+<mat-card-subtitle>Subtitle</mat-card-subtitle>
+<mat-card class="cartoesCorpo">
+  <mat-card-title>Tipo de Cadastro</mat-card-title>
+  <mat-card-content>
+    <mat-radio-button formControlName="formControlName">Usuário</mat-radio-button>
+    <mat-radio-button formControlName="formControlName">Voluntário</mat-radio-button>
+  </mat-card-content>
+</mat-card>
+<mat-card class="cartoesCorpo">
+  <mat-form-field appearance="outline">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Placeholder">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>CPF</mat-label>
+    <input matInput placeholder="Placeholder">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Sexo</mat-label>
+    <mat-select>
+      <mat-option value="option">Masculino</mat-option>
+      <mat-option value="option">Feminino</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-card>
+<mat-card class="cartoesCorpo">
+  <mat-form-field appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <input matInput >
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Confirmar E-mail</mat-label>
+    <input matInput >
+  </mat-form-field>
+  <mat-form-field i18n >
+    <input i18n matInput [matDatepicker]="picker" placeholder="Data de Nascimento"><!-- -->
+    <mat-datepicker-toggle  matSuffix [for]="picker" ></mat-datepicker-toggle>
+    <mat-datepicker  #picker></mat-datepicker>
+  </mat-form-field>
+</mat-card>
+<mat-card>
+  <mat-form-field appearance="outline">
+    <mat-label>Senha</mat-label>
+    <input type="password" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Confirma Senha</mat-label>
+      <input type="password" matInput>
+    </mat-form-field>
+</mat-card>
+Ja Possui Cadastro? <a href="">Clique para fazer login</a>
+
+<mat-card-actions>
+  <button  mat-raised-button color="primary"  >Cadastrar</button>
+  <button  (click)="backClicked()"  mat-raised-button class="botaoCancelar">Cancelar</button>
+</mat-card-actions>
+
