@@ -1,10 +1,12 @@
-# AppPids
+# Medicamento Solidario
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) na versão 
+8.3.8.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Servidor de Desenvolvimento
+
+digite `ng serve` para rodar o projeto em desenvolvimento. Abra o navegador em `http://localhost:4200/`. O aplicativo irá abrir altomaticamente e recarregar a cada vez que os fontes forem alterados.
 
 ## Code scaffolding
 
