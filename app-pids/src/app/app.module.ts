@@ -1,3 +1,4 @@
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,6 +19,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClient } from 'selenium-webdriver/http';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -37,6 +40,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       { path: 'app-pids/src/app/cadastro', component: CadastroComponent },
     ]),
