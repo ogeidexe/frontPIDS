@@ -7,8 +7,9 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     margin: auto;
-    width: 40%;
+    width: 60%;
     padding: 10px;
+    background-color: lightgray;
   }
 .botaoCancelar{
   color: white;
