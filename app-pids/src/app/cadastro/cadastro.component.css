@@ -2,6 +2,7 @@
     width: 60%;
     margin: 0;
     margin: auto;
+    margin-top: 30px;
 }
 .centraliza{
   margin: 0;
@@ -18,7 +19,20 @@
 .cartoesCorpo{
   margin: 10px;
 }
+.card{
 
+display: inline-table;
+width: 100%;
+}
 .margin{
+  position:relative;
+  float:center;
+  width:48%;
+  margin: 1%;
+
+
+}
+.card button{
   margin: 10px;
+
 }

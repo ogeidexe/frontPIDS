@@ -25,6 +25,8 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { MatIconModule } from '@angular/material/icon';
+import {MAT_DATE_LOCALE} from '@angular/material';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -51,6 +53,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
+    MatGridListModule,
     RouterModule.forRoot([
       { path: 'app-pids/src/app/cadastro', component: CadastroComponent },
     ]),
@@ -59,6 +62,7 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   providers: [
     MatDatepickerModule,
+    {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'},
   ],
   bootstrap: [AppComponent]
 })

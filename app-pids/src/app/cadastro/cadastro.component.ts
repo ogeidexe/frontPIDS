@@ -1,10 +1,12 @@
 import { CadastroService } from './../cadastro.service';
 import { Component, OnInit } from '@angular/core';
 
+
 import {FormControl, Validators, AbstractControl, FormGroup, FormBuilder} from '@angular/forms';
 
 import {Location} from '@angular/common';
 import { GenericValidator } from './validaCPF';
+import {MAT_DATE_LOCALE} from '@angular/material'
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -20,6 +22,8 @@ export class CadastroComponent implements OnInit {
   confirmaEmail: string;
   telefone: string;
   novoUsuario: any;
+  tipoUsuario = 'option1';
+  //tipoUsuario = new FormControl('', Validators.required).setValue('option1') ;
   constructor
     ( private _location: Location,
       private cadastroServico: CadastroService,
@@ -28,6 +32,8 @@ export class CadastroComponent implements OnInit {
 
   titulo = 'Cadastro de Usuários';
   ngOnInit() {
+
+
   }
   backClicked() {
     this._location.back();
@@ -49,6 +55,13 @@ export class CadastroComponent implements OnInit {
     this.registerForm.hasError('email') ? 'Este email não parece valido' :
     '';
   */
+
+ emailFormControl = new FormControl('', [
+  Validators.required,
+  Validators.email,
+]);
+
+
  validaEmail() {
     if ( this.email === this.confirmaEmail) {
       return true;
@@ -56,6 +69,10 @@ export class CadastroComponent implements OnInit {
       return false;
     }
   }
+
+  selectFormControl = new FormControl('', Validators.required);
+
+
   onSubmit() {
     this.novoUsuario = {
       nome: this.nome,
