@@ -1,5 +1,7 @@
-.cartaoTopo{
-
+.cadastro{
+    width: 60%;
+    margin: 0;
+    margin: auto;
 }
 .centraliza{
   margin: 0;
@@ -16,6 +18,7 @@
 .cartoesCorpo{
   margin: 10px;
 }
+
 .margin{
   margin: 10px;
 }

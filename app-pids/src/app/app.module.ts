@@ -12,6 +12,8 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -21,13 +23,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroComponent
+    CadastroComponent,
+    HeaderBarComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,9 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    MatMenuModule,
+    MatToolbarModule,
+    MatIconModule,
     RouterModule.forRoot([
       { path: 'app-pids/src/app/cadastro', component: CadastroComponent },
     ]),
