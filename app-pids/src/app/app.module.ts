@@ -25,7 +25,7 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MAT_DATE_LOCALE} from '@angular/material';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
 import {MatTableModule} from '@angular/material/table';

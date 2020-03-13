@@ -6,7 +6,7 @@ import {FormControl, Validators, AbstractControl, FormGroup, FormBuilder} from '
 
 import {Location} from '@angular/common';
 import { GenericValidator } from './validaCPF';
-import {MAT_DATE_LOCALE} from '@angular/material'
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
