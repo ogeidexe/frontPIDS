@@ -39,7 +39,7 @@ export class UsuarioListComponent  {
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    0,this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.dataSource.filter = filterValue.trim().toLowerCase();
 
   }
 
