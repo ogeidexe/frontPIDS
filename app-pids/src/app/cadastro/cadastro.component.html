@@ -8,14 +8,14 @@
     <form (ngSubmit)="onSubmit()">
 
       <div class="card">
-        <mat-form-field class="margin"  appearance="outline">
+        <mat-form-field class="margin" appearance="outline">
           <mat-label>Nome</mat-label>
           <input [(ngModel)]="nome" name="nome" matInput required>
         </mat-form-field>
 
         <mat-form-field class="margin" appearance="outline">
           <mat-label>Sexo</mat-label>
-          <mat-select  matNativeControl required [formControl]="selectFormControl" >
+          <mat-select matNativeControl required [formControl]="selectFormControl">
             <mat-option value="option">Masculino</mat-option>
             <mat-option value="option">Feminino</mat-option>
           </mat-select>
@@ -30,13 +30,13 @@
 
         <mat-form-field class="margin" appearance="outline">
           <mat-label>Tipo de Usuario</mat-label>
-        <!--  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-          <mat-select  required [(value)]="tipoUsuario" >
+          <!--  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+          <mat-select required [(value)]="tipoUsuario">
             <mat-option value="option1">Usuario Padrão</mat-option>
             <mat-option value="option2">Voluntario</mat-option>
           </mat-select>
           <mat-error *ngIf="selectFormControl.hasError('required')">
-            O campos e Obrigatorio Fela da Pota
+            O campos e Obrigatorio !
           </mat-error>
         </mat-form-field>
 
@@ -56,20 +56,24 @@
           <input [(ngModel)]="cpf" name="telefone" matInput required>
         </mat-form-field>
 
-        <mat-form-field class="margin" i18n appearance="outline" >
-          <input i18n matInput [(ngModel)]="nascimento" name="nascimento"  [matDatepicker]="picker" placeholder="Data de Nascimento"><!-- -->
-          <mat-datepicker-toggle  matSuffix [for]="picker" ></mat-datepicker-toggle>
-          <mat-datepicker  #picker></mat-datepicker>
+        <mat-form-field class="margin" i18n appearance="outline">
+          <input i18n matInput [(ngModel)]="nascimento" name="nascimento" [matDatepicker]="picker"
+            placeholder="Data de Nascimento"><!-- -->
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
       <div class="card">
         <mat-form-field class="margin" appearance="outline">
           <mat-label>E-mail</mat-label>
-          <input  [(ngModel)]="email" name="telefone" matInput required >
+          <input [formControl]="emailFormControl" name="email" matInput required>
+          <mat-error *ngIf="emailFormControl.hasError('email')">
+            E-mail Invalido !
+          </mat-error>
         </mat-form-field>
         <mat-form-field class="margin" appearance="outline">
           <mat-label>Confirmar E-mail</mat-label>
-          <input  (value)="confirmaEmail" matInput required >
+          <input (value)="confirmaEmail" matInput required>
         </mat-form-field>
 
       </div>
@@ -86,17 +90,14 @@
       </div>
       <div class="card">
 
-      Ja Possui Cadastro? <a href="">Clique para fazer login</a>
+        Ja Possui Cadastro? <a href="">Clique para fazer login</a>
 
-<br>
-<br>
+        <br>
+        <br>
 
-        <button  type="submit" mat-raised-button color="primary"  >Cadastrar</button>
-        <button  (click)="backClicked()"  mat-raised-button class="botaoCancelar">Cancelar</button>
+        <button type="submit" mat-raised-button color="primary">Cadastrar</button>
+        <button (click)="backClicked()" mat-raised-button class="botaoCancelar">Cancelar</button>
       </div>
     </form>
 
   </mat-card-content>
-
-
-

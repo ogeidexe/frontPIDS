@@ -27,6 +27,8 @@ import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MAT_DATE_LOCALE} from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -34,7 +36,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
   declarations: [
     AppComponent,
     CadastroComponent,
-    HeaderBarComponent
+    HeaderBarComponent,
+    UsuarioListComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     FormsModule,
     MatMenuModule,
     MatToolbarModule,
+    MatTableModule,
     MatIconModule,
     MatGridListModule,
     RouterModule.forRoot([
