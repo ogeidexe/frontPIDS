@@ -7,3 +7,7 @@
 
   background-color:#007fff;
 }
+
+.imageLogo:focus {
+  outline: none;
+}

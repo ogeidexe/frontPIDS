@@ -29,6 +29,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
 import {MatTableModule} from '@angular/material/table';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -37,7 +39,9 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     CadastroComponent,
     HeaderBarComponent,
-    UsuarioListComponent
+    UsuarioListComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
