@@ -57,8 +57,8 @@
         </mat-form-field>
 
         <mat-form-field class="margin" i18n appearance="outline">
-          <input i18n matInput [(ngModel)]="nascimento" name="nascimento" [matDatepicker]="picker"
-            placeholder="Data de Nascimento"><!-- -->
+          <mat-label>Date de Nascimento</mat-label>
+          <input i18n matInput [(ngModel)]="nascimento" name="nascimento" [matDatepicker]="picker">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
