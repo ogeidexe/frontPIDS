@@ -31,7 +31,9 @@ import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.compon
 import {MatTableModule} from '@angular/material/table';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
+// export const options: Partial<IConfig> | (() => Partial<IConfig>) = '';
 
 
 @NgModule({
@@ -57,6 +59,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatMenuModule,
     MatToolbarModule,
     MatTableModule,

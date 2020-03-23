@@ -3,9 +3,8 @@ import { AbstractControl, Validators } from '@angular/forms';
 export class GenericValidator {
   constructor() {}
 
-  /**
-   * Valida se o CPF é valido. Deve-se ser informado o cpf sem máscara.
-  */
+  /*Valida se o CPF é valido. Deve-se ser informado o cpf sem máscara*/
+
   static isValidCpf() {
     return (control: AbstractControl): Validators => {
       const cpf = control.value;
